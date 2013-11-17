@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: WP Category Post List Widget
+Plugin Name: WP Category Post List Widget (romain)
 Plugin URI: http://www.intechgrity.com/wp-plugins/wp-category-post-list-wordpress-plugin/
 Description: Lists down Posts filtered by category. You can show thumbnail, modify the HTML structure of the widget and do almost whatever you want. Access it from the Widgets option under the Appearance. The shortcode is [wp_cpl_sc] Check the settings page for more info or check the documentation <a href="http://www.intechgrity.com/wp-plugins/wp-category-post-list-wordpress-plugin/">here</a>
 Version: 2.0.3
-Author: Swashata
+Author: Swashata modifier par romain
 Author URI: http://www.swashata.com/
 License: GPL2
 */
@@ -46,9 +46,8 @@ License: GPL2
  * @todo Add pagination support for shortcode
  * @todo Add custom field sorting
  */
-
-
-
+//romain
+$text_domain="";
 /**
  * Include the loader
  */
