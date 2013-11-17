@@ -1,5 +1,5 @@
 === WP Category Post List Widget ===
-Contributors: swashata
+Contributors: swashata (modifié par romain)
 Donate link: http://www.intechgrity.com/about/buy-us-some-beer/
 Tags: wordpress, category, widget, category-post, post, list, thumbnail, category-post-list
 Requires at least: 3.0
