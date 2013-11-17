@@ -159,9 +159,20 @@ class WP_Category_Post_List_itg extends WP_Widget {
                  * @since v1.1.0
 		 */
 		if(true == $instance['show_read_more'] && '' != $instance['read_more_html']) {
-			$post_output .= '<p class="wp-cpl-read-more"><a href="' . get_category_link($cat_id) . '" title="' . $wp_cpl_cat_info->description . '">' . $instance['read_more_html'] . '</a></p>';
+			//romain
+			//$post_output .= '<p class="wp-cpl-read-more"><a href="' . get_category_link($cat_id) . '" title="' . $wp_cpl_cat_info->description . '">' . $instance['read_more_html'] . '</a></p>';
+	        $arg = array(
+				'post_type' =>  get_post_types(),
+	            'cat' => $cat_id,
+	        );
+			$postts = get_posts($arg);
+	        if ($postts['0']->post_type == "post"){ // post standard
+				$post_output .= '<p class="wp-cpl-read-more"><a href="' . get_category_link($cat_id) . '" title="' . $wp_cpl_cat_info->description . '">' . $instance['read_more_html'] . '</a></p>';	        	
+	        }else{ // post type
+				$post_output .= '<p class="wp-cpl-read-more"><a href="' . get_the_terms($cat_id, 'category') . '" title="' . $wp_cpl_cat_info->description . '">' . $instance['read_more_html'] . '</a></p>';
+	        }
+	        ///
 		}
-
 		/**
 		 * Done all the dynamic things
 		 * Now add the post_output to output and close the theme's widget

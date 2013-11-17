@@ -31,6 +31,9 @@ class itgdb_wp_cpl_output_gen {
         );
 
         $arg = array(
+			//romain
+			'post_type' =>  get_post_types(),
+			///
             'cat' => $cat_id,
             'numberposts' => $op['list_num'],
             'orderby' => $wp_cpl_sort_array[$op['sort_using']],
